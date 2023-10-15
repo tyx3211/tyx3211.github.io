@@ -1,0 +1,29 @@
+html{
+    background-color:wheat;
+}
+body{
+    width:900px;
+    height:1000px;
+    margin:0 auto;
+    background-color:aliceblue;
+}
+h1{
+    text-align:center;
+    font-size:60px;
+    font-style:italic;
+    text-shadow:3px 3px 1px black;
+}
+p{
+    font-size:30px;
+    margin:5px 0;
+    padding:0;
+}
+h2{
+    font-size:45px;
+    font-style:italic;
+    color:brown;
+}
+ol{
+    font-size:30px;
+    color:rosybrown;
+}
