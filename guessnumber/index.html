@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="width" content="device-width" />
+    <title>Let's guess</title>
+    <link href="styleguess.css" rel="stylesheet" />
+    <script src="scriptguess.js" defer></script>
+</head>
+
+<body>
+    <h1>猜数大挑战！</h1>
+    <h2>规则</h2>
+    <ul>
+        <li>请猜一个1~100的正整数。</li>
+        <li>我会根据你猜的数字，回答你大了，小了，或对了。</li>
+        <li>十次内猜出来即为成功，反之失败！</li>
+    </ul>
+    <h3>点击下方按钮开始游戏！</h3>
+    <button class="start">开始游玩</button>
+    <div class="Div">
+        <p id="p1">Enter a guess number:</p>
+        <input type="number" min="1" max="100" required id="guessfield" class="guessfield" />
+        <input type="submit" value="Submit guess" class="guessSubmit" />
+        <p id="recordp">History guess:</p>
+        <p id="respondp"></p>
+        <p id="tellp"></p>
+        <button class="reset">重来</button>
+    </div>
+</body>
+</html>
