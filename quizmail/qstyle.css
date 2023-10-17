@@ -1,0 +1,40 @@
+html {
+    background-color: aliceblue;
+}
+
+body {
+    padding:20px;
+    border:5px solid black;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sender-column,
+.uptime {
+    text-align: right;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+p,
+ul,
+ol,
+dl,
+address {
+    font-size: 1.1em;
+}
+
+p,
+li,
+dd,
+dt,
+address {
+    line-height: 1.5;
+}
