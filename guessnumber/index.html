@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="device-width" />
     <title>Let's guess</title>
     <link href="styleguess.css" rel="stylesheet" />
     <script src="scriptguess.js" defer></script>
@@ -20,7 +20,7 @@
     <button class="start">开始游玩</button>
     <div class="Div">
         <p id="p1">Enter a guess number:</p>
-        <input type="number" min="1" max="100" required id="guessfield" class="guessfield" />
+        <input type="number" min="1" max="100" required onkeydown="transmit(event)" id="guessfield" class="guessfield" />
         <input type="submit" value="Submit guess" class="guessSubmit" />
         <p id="recordp">History guess:</p>
         <p id="respondp"></p>

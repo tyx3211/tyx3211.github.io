@@ -21,6 +21,7 @@ stratgame.addEventListener("click",()=>{
     }
 });
 
+
 resetgame.addEventListener("click",()=>{
     startcheck=0;
     numcheck=1;
@@ -94,7 +95,14 @@ function checkguess(){
     numcheck++;
 }
 
+function transmit(event){
+    if(event.key==="Enter"){
+        checkguess();
+    }
+}
+
 GuessSubmit.addEventListener("click",checkguess);
+
 
 
 
