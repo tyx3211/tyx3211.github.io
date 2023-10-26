@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'alimamaEast';
-    src: url('alimamaEast.woff') format('woff');
+    font-family: 'alimamaEastLess';
+    src: url('alimamaEastLess.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 html{
-    font-family: "alimamaEast";
+    font-family: "alimamaEastLess";
 }
 
 body{
@@ -246,7 +246,7 @@ body .transmark:checked~.trans .heart-box .heart{
 
 .form-box input::placeholder {
     color: rgba(255, 255, 255, 0.8);
-    font-family: "alimamaEast";
+    font-family: "alimamaEastLess";
 }
 
 .form-box button{
@@ -257,7 +257,7 @@ body .transmark:checked~.trans .heart-box .heart{
     background:#00addd;
     color:#fff;
     border-radius: 6.5px;
-    font-family: "alimamaEast";
+    font-family: "alimamaEastLess";
     font-size:17px;
     font-weight:400;
     cursor:pointer;
@@ -331,7 +331,7 @@ body .transmark:checked~.trans .heart-box .heart{
 
 .sign-box input::placeholder {
     color: rgba(255, 255, 255, 0.8);
-    font-family: "alimamaEast";
+    font-family: "alimamaEastLess";
 }
 
 .sign-box button{
@@ -342,7 +342,7 @@ body .transmark:checked~.trans .heart-box .heart{
     background:#00addd;
     color:#fff;
     border-radius: 6.5px;
-    font-family: "alimamaEast";
+    font-family: "alimamaEastLess";
     font-size:17px;
     font-weight:400;
     cursor:pointer;
