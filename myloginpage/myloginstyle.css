@@ -20,10 +20,6 @@ button{
     outline:none !important;
 }
 
-#container{
-    height:100vh;
-}
-
 .bg {
     position: absolute;
     top: 0;
