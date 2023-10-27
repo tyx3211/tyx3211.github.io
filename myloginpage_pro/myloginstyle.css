@@ -431,9 +431,26 @@ body .transmark:checked~.trans .heart-box .heart{
 
 .myIntro h1{
     font-family:"alimamaEastLess";
-    font-size:60px;
     text-align: center;
     font-style: normal;
+}
+
+@media screen and (min-aspect-ratio:1/1){
+    h1{
+        font-size:60px;
+    }
+}
+
+@media screen and (max-aspect-ratio:1/1){
+    h1{
+        font-size:60px;
+    }
+}
+
+@media screen and (min-aspect-ratio:1/1){
+    h1{
+        font-size:40px;
+    }
 }
 
 .myIntro .backnext{
