@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>tyx login page</title>
+    <link href="myloginstyle.css" rel="stylesheet" />
+    <script src="pro.js" defer></script>
+</head>
+
+<body>
+    <input type="checkbox" id="b1" class="transmark" hidden />
+    <span class="indicator"></span>
+    <label class="c2" for="b1"></label>
+
+    <div id="container" class="trans">
+        <div class="bg"></div>
+        <div class="moon-box">
+            <div class="moon"></div>
+        </div>
+        <div class="heart-box">
+            <div class="heart"></div>
+        </div>
+        <div class="sea"></div>
+    </div>
+    <input type="checkbox" id="slip_btn" hidden />
+    <div class="form-box">
+        <div class="tit">SIGN IN</div>
+        <input type="text" placeholder="账号" onkeydown="next1(event)" />
+        <input type="password" placeholder="密码" onkeydown="handIn1(event)" />
+        <button id="sign_in">登录</button>
+        <span class="question">
+            没有账号？
+        </span>
+        <label class="search-btn" for="slip_btn">
+            <span class="search">点我注册</span>
+        </label>
+    </div>
+    <div class="sign-box">
+        <div class="tip">SIGN UP</div>
+        <input type="text" placeholder="请输入账号..." onkeydown="next2(event)" />
+        <input type="password" placeholder="请输入密码..." onkeydown="next3(event)" />
+        <input type="password" placeholder="请重复密码..." onkeydown="handIn2(event)" />
+        <button id="sign_up">注册</button>
+        <span id="delete">注销所有账号</span>
+        <label class="back-btn" for="slip_btn">
+            <span id="back">返回登录页面</span>
+        </label>
+    </div>
+    <div class="myIntro">
+        <h1>我是谭宇轩</h1>
+        <ul>
+            <li>我是2023级的大一新生</li>
+            <li>我平时没啥特别的爱好，也就比较喜欢打lol，瓦什么的</li>
+            <li>我对编程比较感兴趣，对c/c++较为熟悉，但是也觉得前端很有趣</li>
+        </ul>
+        <div class="things-I-like">
+            <div class="like">
+                <h2>一些喜欢听的歌</h2>
+                <ul>
+                    <li>周杰伦《轨迹》《退后》</li>
+                    <li>林俊杰《黑夜问白天》《江南》</li>
+                    <li>许嵩《雨幕》《纸上雪》</li>
+                </ul>
+            </div>
+            <div class="help">
+                <div class="like like1">
+                    <h2>喜欢玩的游戏</h2>
+                    <ul>
+                        <li>英雄联盟</li>
+                        <li>泰拉瑞亚</li>
+                        <li>空洞骑士</li>
+                    </ul>
+                </div>
+                <div class="like like2">
+                    <h2>喜欢看的动漫</h2>
+                    <ul>
+                        <li>命运石之门</li>
+                        <li>赛博朋克：边缘行者</li>
+                        <li>玉子爱情故事</li>
+                    </ul>
+                </div>
+            </div>
+            <span id="thanks">感谢学长学姐观看</span>
+            <span class="backnext">重新登录</span>
+        </div>
+</body>
+
+</html>
