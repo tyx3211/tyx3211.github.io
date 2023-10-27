@@ -15,6 +15,11 @@ body{
     overflow:hidden;
 }
 
+#container{
+    width:100vw;
+    height:100vh;
+}
+
 button{
     border:none !important;
     outline:none !important;
