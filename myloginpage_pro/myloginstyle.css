@@ -405,6 +405,14 @@ body .transmark:checked~.trans .heart-box .heart{
         border-left: 2px solid rgba(255, 255, 255, 0.5);
         transition:1s;
     }
+    .myIntro h1{
+        font-size:50px;
+    }
+    .myIntro ul{
+        font-size:25px;
+        font-style:italic;
+    }
+    
 }
 
 @media screen and (max-aspect-ratio:1/1){
@@ -427,30 +435,19 @@ body .transmark:checked~.trans .heart-box .heart{
         border-left: 1px solid rgba(255, 255, 255, 0.5);
         transition:1s;
     }
+    .myIntro h1{
+        font-size:40px;
+    }
+    .myIntro ul{
+        font-size:18px;
+        font-style:italic;
+    }
 }
 
-.myIntro h1{
+.myIntro{
     font-family:"alimamaEastLess";
     text-align: center;
     font-style: normal;
-}
-
-@media screen and (min-aspect-ratio:1/1){
-    h1{
-        font-size:60px;
-    }
-}
-
-@media screen and (max-aspect-ratio:1/1){
-    h1{
-        font-size:60px;
-    }
-}
-
-@media screen and (min-aspect-ratio:1/1){
-    h1{
-        font-size:40px;
-    }
 }
 
 .myIntro .backnext{
@@ -469,6 +466,8 @@ body .transmark:checked~.trans .heart-box .heart{
 .myIntro .backnext:hover{
     text-decoration: underline;
 }
+
+
 
 
  
