@@ -127,17 +127,7 @@ function Judge(judge){
     let leftCheck=1;
     let rightCheck=1;
 
-    if((rowCheck>=1)&&(rowCheck<=5)&&(ballY<=rowCheck*brickHeight+judge)&&(ballY>=rowCheck*brickHeight)&&(bricks[rowCheck-1][colCheck]===1)){
-        upCheck=0;
-        bricks[rowCheck-1][colCheck]=0;
-        angle*=-1;
-        scores++;
-    }else if((rowCheck>=0)&&(rowCheck<=4)&&(ballY>=(rowCheck+1)*brickHeight-judge)&&(ballY<=(rowCheck+1)*brickHeight)&&(bricks[rowCheck+1][colCheck]===1)){
-        downCheck=0;
-        bricks[rowCheck+1][colCheck]=0;
-        angle*=-1;
-        scores++;
-    }else if((colCheck>=1)&&(rowCheck<=9)&&(ballX<=colCheck*brickWidth+judge)&&(ballX>=colCheck*brickWidth)&&(bricks[rowCheck][colCheck-1]===1)){
+    if((colCheck>=1)&&(rowCheck<=9)&&(ballX<=colCheck*brickWidth+judge)&&(ballX>=colCheck*brickWidth)&&(bricks[rowCheck][colCheck-1]===1)){
         leftCheck=0;
         bricks[rowCheck][colCheck-1]=0;
         angle=Math.PI-angle;
@@ -146,6 +136,16 @@ function Judge(judge){
         rightCheck=0;
         bricks[rowCheck][colCheck+1]=0;
         angle=Math.PI-angle;
+        scores++;
+    }else if((rowCheck>=1)&&(rowCheck<=5)&&(ballY<=rowCheck*brickHeight+judge)&&(ballY>=rowCheck*brickHeight)&&(bricks[rowCheck-1][colCheck]===1)){
+        upCheck=0;
+        bricks[rowCheck-1][colCheck]=0;
+        angle*=-1;
+        scores++;
+    }else if((rowCheck>=0)&&(rowCheck<=4)&&(ballY>=(rowCheck+1)*brickHeight-judge)&&(ballY<=(rowCheck+1)*brickHeight)&&(bricks[rowCheck+1][colCheck]===1)){
+        downCheck=0;
+        bricks[rowCheck+1][colCheck]=0;
+        angle*=-1;
         scores++;
     }
     return upCheck*downCheck*leftCheck*rightCheck;
