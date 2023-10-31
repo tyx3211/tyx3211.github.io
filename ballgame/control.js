@@ -1,12 +1,3 @@
-//小球半径：1/10板长度，板长度：1/10 stdWidth
-//stdwidth:clientWidth
-//stdX:clientLeft+offsetLeft,stdY:clientTop+offsetTop
-//鼠标：X:clientX-stdX,Y:clientY-stdY
-//stdX:clientLeft+offsetLeft,stdY:clientTop+offsetTop
-//状态：未开始0，预开始：1，开始：2，结束：3，空置：4
-//记得写canvas.focus();
-
-
 let gameBg=document.querySelector(".gamebg");
 let canvas=document.querySelector("canvas");
 let scoresText=document.querySelector("span");
@@ -77,6 +68,16 @@ WinnerImg.onload=function(){
     imgCheck[4]=1;
 }
 
+
+//保证angle在[-Pi/2,3Pi/2)之间
+function transAngle(){
+    if((angle>(Math.PI/2))&&(angle<(Math.PI*3/2))){
+        angle=-angle+2*Math.PI;
+    }else{
+        angle*=-1;
+    }
+}
+
 function drawBricks(){
     for(let i=0;i<5;i++){
         for(let j=0;j<10;j++){
@@ -107,11 +108,11 @@ function wallCollision(){
         angle=Math.PI-angle;
     }
     if(ballY<radius){
-        angle*=-1;
+        transAngle();
     }
     if(ballY>stdHeight-padHeight-0.75*radius){
         if((ballX>padX-0.5*padWidth)&&(ballX<padX+0.5*padWidth)){
-            angle*=-1;
+            transAngle();
         }
         else{
             gamecheck=3;
@@ -128,25 +129,57 @@ function Judge(judge){
     let rightCheck=1;
 
     if((colCheck>=1)&&(rowCheck<=9)&&(ballX<=colCheck*brickWidth+judge)&&(ballX>=colCheck*brickWidth)&&(bricks[rowCheck][colCheck-1]===1)){
-        leftCheck=0;
-        bricks[rowCheck][colCheck-1]=0;
-        angle=Math.PI-angle;
-        scores++;
+        if((angle>Math.PI/2)&&(angle<Math.PI*3/2)){
+            leftCheck=0;
+            bricks[rowCheck][colCheck-1]=0;
+            angle=Math.PI-angle;
+            scores++;
+        }else{
+            //优化
+            leftCheck=0;
+            bricks[rowCheck][colCheck-1]=0;
+            transAngle();
+            scores++;
+        }
     }else if((ballX>=(colCheck+1)*brickWidth-judge)&&(ballX<=(colCheck+1)*brickWidth)&&(colCheck>=0)&&(rowCheck<=8)&&(bricks[rowCheck][colCheck+1]===1)){
-        rightCheck=0;
-        bricks[rowCheck][colCheck+1]=0;
-        angle=Math.PI-angle;
-        scores++;
+        if(!((angle>Math.PI/2)&&(angle<Math.PI*3/2))){
+            rightCheck=0;
+            bricks[rowCheck][colCheck+1]=0;
+            angle=Math.PI-angle;
+            scores++;
+        }else{
+            //优化
+            rightCheck=0;
+            bricks[rowCheck][colCheck+1]=0;
+            transAngle();
+            scores++;
+        }
     }else if((rowCheck>=1)&&(rowCheck<=5)&&(ballY<=rowCheck*brickHeight+judge)&&(ballY>=rowCheck*brickHeight)&&(bricks[rowCheck-1][colCheck]===1)){
-        upCheck=0;
-        bricks[rowCheck-1][colCheck]=0;
-        angle*=-1;
-        scores++;
+        if(!(angle>=0&&angle<=Math.PI)){
+            upCheck=0;
+            bricks[rowCheck-1][colCheck]=0;
+            transAngle();
+            scores++;
+        }else{
+            //优化
+            upCheck=0;
+            bricks[rowCheck-1][colCheck]=0;
+            angle=Math.PI-angle;
+            scores++;
+        }
     }else if((rowCheck>=0)&&(rowCheck<=4)&&(ballY>=(rowCheck+1)*brickHeight-judge)&&(ballY<=(rowCheck+1)*brickHeight)&&(bricks[rowCheck+1][colCheck]===1)){
-        downCheck=0;
-        bricks[rowCheck+1][colCheck]=0;
-        angle*=-1;
-        scores++;
+        if(angle>0&&angle<Math.PI){
+            downCheck=0;
+            bricks[rowCheck+1][colCheck]=0;
+            transAngle();
+            scores++;
+        }else{
+            //优化
+            downCheck=0;
+            bricks[rowCheck+1][colCheck]=0;
+            angle=Math.PI-angle;
+            scores++;
+        }
     }
     return upCheck*downCheck*leftCheck*rightCheck;
 }
