@@ -221,7 +221,7 @@ body .transmark:checked~.trans .heart-box .heart{
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     transition:1s;
 }
-.form-box .tit{
+.form-box .tip1{
     cursor:default;
     color:#fff;
     font-size:38px;
