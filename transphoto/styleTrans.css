@@ -23,46 +23,46 @@ body{
 }
 
 .item1{
-	left: 0;
+    left: 0;
     height: 25%;
     width:17%;
 	z-index: 9;
 }
 .item2{
-	left: 12.5%;
+    left: 12.5%;
     height: 27.5%;
     width:18.5%;
-	z-index: 18;
+    z-index: 18;
 }
 .item3{
-	left: 25%;
+    left: 25%;
     height: 30%;
     width:20.5%;
-	z-index: 27;
+    z-index: 27;
 }
 .item4{
-	left: 40%;
+    left: 40%;
     height:32.5%;
     width:22%;
-	z-index: 36;
+    z-index: 36;
 }
 .item5{
-	left: 54.5%;
+    left: 54.5%;
     height:30%;
     width:20.5%;
-	z-index: 27;
+    z-index: 27;
 }
 .item6{
-	left:69%;
+    left:69%;
     height:27.5%;
     width:18.5%;
-	z-index: 18;
+    z-index: 18;
 }
 .item7{
-	left: 83%;
+    left: 83%;
     height:25%;
     width:17%;
-	z-index: 9;
+    z-index: 9;
 }
 .swipe{
     width:100%;
