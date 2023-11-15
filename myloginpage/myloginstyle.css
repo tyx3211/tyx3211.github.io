@@ -70,7 +70,7 @@ button{
     width:300px;
     height:480px;
     background:red;
-    border-radius: 300px 300px 0;
+    border-radius: 320px 320px 0;
     transform-origin: 100% 100%;
     transform: rotate(45deg);
 }
@@ -82,7 +82,7 @@ button{
     width:300px;
     height:480px;
     background:red;
-    border-radius: 300px 300px 0;
+    border-radius: 320px 320px 0;
     transform-origin: bottom right;
     transform: rotate(-90deg);
 }
