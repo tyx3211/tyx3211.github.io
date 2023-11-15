@@ -14,7 +14,7 @@ let brickHeight=0.09*stdHeight;
 let padWidth=1.5*brickWidth;
 let padHeight=0.3*brickHeight;
 let radius=0.1*brickWidth;
-let ballSpeed=2;
+let ballSpeed=3;
 let angle=-Math.PI/2;
 
 let gamecheck=4;
@@ -211,7 +211,7 @@ function draw(){
             drawScores();
             if(gamecheck===2){
                 if(scores===20){
-                    ballSpeed=3;
+                    ballSpeed=4;
                 }
                 ballX+=ballSpeed*Math.cos(angle);
                 ballY+=ballSpeed*Math.sin(angle);
@@ -255,7 +255,7 @@ function start(){
         ballY=0.9*stdHeight;
         gamecheck=0;
         scores=0;
-        ballSpeed=2;
+        ballSpeed=3;
         for(let i=0;i<5;i++){
             for(let j=1;j<9;j++){
                 bricks[i][j]=1;
@@ -303,4 +303,4 @@ function controlGame(event){
 startButton.addEventListener("click",start);
 canvas.addEventListener("mousemove",movePad);
 canvas.addEventListener("click",controlGame);
-let Interval=setInterval(draw,3);
+let Interval=setInterval(draw,4);
