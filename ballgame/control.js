@@ -48,7 +48,7 @@ let ballImg=new Image();
 ballImg.src="image/blueball.png";
 let overImg=new Image();
 overImg.src="image/gameover.png";
-let imgCheck=[0,0,0,0];
+let imgCheck=[0,0,0,0,0];
 let WinnerImg=new Image();
 WinnerImg.src="image/congratulations.png";
 
@@ -128,7 +128,7 @@ function Judge(judge){
     let leftCheck=1;
     let rightCheck=1;
 
-    if((colCheck>=1)&&(rowCheck<=9)&&(ballX<=colCheck*brickWidth+judge)&&(ballX>=colCheck*brickWidth)&&(bricks[rowCheck][colCheck-1]===1)){
+    if((colCheck>=1)&&(colCheck<=9)&&(rowCheck<=5)&&(ballX<=colCheck*brickWidth+judge)&&(ballX>=colCheck*brickWidth)&&(bricks[rowCheck][colCheck-1]===1)){
         if((angle>Math.PI/2)&&(angle<Math.PI*3/2)){
             leftCheck=0;
             bricks[rowCheck][colCheck-1]=0;
@@ -141,7 +141,7 @@ function Judge(judge){
             transAngle();
             scores++;
         }
-    }else if((ballX>=(colCheck+1)*brickWidth-judge)&&(ballX<=(colCheck+1)*brickWidth)&&(colCheck>=0)&&(rowCheck<=8)&&(bricks[rowCheck][colCheck+1]===1)){
+    }else if((ballX>=(colCheck+1)*brickWidth-judge)&&(ballX<=(colCheck+1)*brickWidth)&&(colCheck>=0)&&(colCheck<=8)&&(rowCheck<=5)&&(bricks[rowCheck][colCheck+1]===1)){
         if(!((angle>Math.PI/2)&&(angle<Math.PI*3/2))){
             rightCheck=0;
             bricks[rowCheck][colCheck+1]=0;
