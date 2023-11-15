@@ -220,7 +220,7 @@ body .transmark:checked~.trans .heart-box .heart{
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     transition:1s;
-}
+}/*主轴为column的flex盒子的子元素即使是行内元素也会独占一行*/
 .form-box .tip1{
     cursor:default;
     color:#fff;

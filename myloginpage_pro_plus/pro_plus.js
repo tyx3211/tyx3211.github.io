@@ -159,9 +159,6 @@ function accountDelete(){
 inButton.addEventListener("click",signIn);
 upButton.addEventListener("click",signUp);
 myDelete.addEventListener("click",accountDelete);
-backNext.addEventListener("click",()=>{
-    styleExtra.innerHTML+=" .form-box{bottom:50%;} .myIntro{bottom:150%;}";
-});
 
 function next1(event){
     if(event.key==="Enter"){
