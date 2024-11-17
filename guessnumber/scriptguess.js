@@ -10,7 +10,6 @@ let startcheck=0;
 let numcheck=1;
 let wincheck=0;
 
-DIV.hidden=1;
 let aimnum=Math.floor(Math.random()*100)+1;
 
 stratgame.addEventListener("click",()=>{
